@@ -1,0 +1,16 @@
+<script type="text/x-template" id="slider-template">
+	<div ref="conSlider" class="container-slider">
+		<div @click="handleClickLeft" class="slider-control slider-control-left">
+			<i class="fa fa-chevron-left"></i>
+		</div>
+		<div @click="handleClickRight" class="slider-control slider-control-right">
+			<i class="fa fa-chevron-right"></i>
+		</div>
+		<div class="slider-wrapper" :style="{'margin-left':marginLeftSlider+'px','width':widthSliderWrapper+'px'}">
+			<div class="container-card">
+        <card-music v-for="m in fvMusicas" :key="m._id" :musica="m">
+        </card-music>
+			</div>
+		</div>
+	</div>
+</script>

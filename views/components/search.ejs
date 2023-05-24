@@ -1,0 +1,23 @@
+<script type="text/x-template" id="search-template">
+	<div class="container-search">
+		<!-- <div class="search-bar"> -->
+      <form class="form-bar" submit.prevent="getFetch()">
+        <input ref="inputSearch" type="search" v-model="searchText" class="clean-widget" name="search" placeholder="procurar musica...(ex: Ed Shreeran)" >
+        <!-- <button type="submit" class="btn btn-primary">Pesquisar</button> -->
+      </form>
+    <!-- </div> -->
+    <div class="content-search">
+      <div class="music-list">
+        <div class="m-item" v-for="m in result">
+          <div class="m-item-image">
+            <img :src="m.image" width="100px" height="100px"/>
+          </div>
+          <div class="m-item-detail">
+            <p class="m-title">{{m.title}}</p>
+            <p class="m-author">{{m.author}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+</script>

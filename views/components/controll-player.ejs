@@ -1,0 +1,46 @@
+<script type="text/x-template" id="controll-player-template">
+  <div class="container-player-controll">
+    <div class="player-detail"></div>
+    <div class="wrapper-player wrapper-player-transparent">
+      <div class="controllers-btns">
+        <div class="controllers-btn-actions">
+          <div class="icon m-btn-random">
+            <i class="icon-color-primary fa fa-random"></i>
+          </div>
+          <div class="icon m-btn-backward">
+            <i class="icon-color-primary fa fa-backward"></i>
+          </div>
+          <div class="icon m-btn-play-pause" @click="handlerPlayMusic">
+            <i class="icon-color-primary" :class="'fa fa-'+(isPlay ? 'pause-circle': 'play-circle')"></i>
+          </div>
+          <div class="icon m-btn-forward">
+            <i class="icon-color-primary fa fa-forward"></i>
+          </div>
+        </div>
+        <div class="controllers-btn-state">
+          <div class="icon m-btn-volume">
+            <i class="icon-color-primary fa fa-volume-up"></i>
+          </div>
+          <div class="progress-bar progress-bar-volume" ref="progressBarVolume" @mousemove="handlerHoverVolume($event)"
+            @mousedown="handlerDownVolume($event)" @mouseup="handlerUpVolume($event)">
+  
+            <div class="progress-bar-state"></div>
+            <button class="btn progress-bar-btn"></button>
+          </div>
+        </div>
+      </div>
+      <div class="controllers-slider">
+        <div class="progress-bar progress-bar-slider" ref="progressBarSlider" @mousemove="handlerHoverSlider($event)"
+          @mousedown="handlerDownSlider($event)" @mouseup="handlerUpSlider($event)">
+  
+          <div class="progress-bar-state"></div>
+          <button class="btn progress-bar-btn"></button>
+        </div>
+      </div>
+    </div>
+    <canvas class="canvas-effect-player" ref="canvas"></canvas>
+    <audio ref="tagAudio" id="audio-player">
+      <!-- <source src="getAMusica.url_musica"/> -->
+    </audio>
+  </div>
+</script>

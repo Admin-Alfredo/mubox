@@ -1,0 +1,12 @@
+<script type="text/x-template" id="content-home-template">
+<div class="container-content-home" >
+  <h1>Todas as musicas</h1>
+  <div class="container-card">
+    <card-music 
+      v-for="m in musicas" :key="m._id"
+      v-bind:musica="m"
+      styleCard="card-style">
+    </card-music>
+  </div>
+</div>
+</script>

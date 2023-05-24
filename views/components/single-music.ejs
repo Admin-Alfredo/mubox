@@ -1,0 +1,43 @@
+<script type="text/x-template" id="single-music-template">
+  <div class="container-single-music">
+    <div class="wrapper-single">
+      <div v-for="m in a_musica" class="m-detail-single">
+        <div class="m-single-image">
+          <img :src="m.image" alt="img"/>
+        </div>
+        <div class="m-single">
+          <p class="m-title  m-single-title">{{m.title}}</p>
+          <p class="m-author  m-single-author">{{m.author}}</p>
+          <p class="m-single-data">{{m.date}}</p>
+          <div class="m-social-single">
+            <div id="m-single-lk" class="m-single-lk">
+              <div class="icon icon-lk">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <label for="m-single-lk" class="m-single-label">5</label>
+            </div>
+            <div id="m-single-st" class="m-single-st">
+              <div class="icon icon-st">
+                <i class="fa fa-star"></i>
+              </div>
+              <label for="m-single-st" class="m-single-label">50</label>
+            </div>
+            <div id="m-single-fv" class="m-single-fv">
+              <div class="icon icon-fv">
+                <i class="fa fa-heart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <!-- <h2>Mais de {{a_musica[0].author}} e {{musicas}}</h2> -->
+      <div class="container-card m-more-self-single">
+        <card-music 
+          v-for="m in selfs" :key="m._id"
+          v-bind:musica="m"
+          styleCard="card-style">
+        </card-music>
+      </div>
+    </div>
+  </div>
+</script>

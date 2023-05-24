@@ -1,0 +1,29 @@
+<script type="text/x-template" id="menu-template">
+	<nav class="navbar" ref="navbar">
+			<div class="navigation">
+				<div class="nav-item" @click="setTab(0)" :class="tab === 0 ? 'item-active': ''">
+					<router-link to="/" >
+						<i class="fa fa-home icon-color-primary"></i>
+						<label>Home</label>
+					</router-link>
+					<div class="nav-item-border" :class="tab === 0 ? 'nav-item-border-active': ''"></div>
+				</div>
+				<div class="nav-item" @click="setTab(1)" :class="tab === 1 ? 'item-active': ''">
+					<router-link to="/buscar" >
+						<i class="fa fa-search icon-color-primary"></i>
+						<label>Pesquisar</label> 
+					</router-link>
+					<div class="nav-item-border" :class="tab === 1 ? 'nav-item-border-active': ''"></div>
+				</div>
+				<div class="nav-item" @click="setTab(2)" :class="tab === 2 ? 'item-active': ''">
+					<router-link to="/albums" >
+						<i class="fa fa-heart icon-color-primary"></i>
+						<label>Favoritos</label> 
+					</router-link>
+					<div class="nav-item-border" :class="tab === 2 ? 'nav-item-border-active': ''"></div>
+				</div>
+			</div>
+			<div class="menu-options">
+			</div>
+	</nav>
+</script>

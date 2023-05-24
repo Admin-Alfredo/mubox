@@ -1,0 +1,28 @@
+<script type="text/x-template" id="card-template">
+  <div class="card" v-bind:class="styleCard" @click="handlerClickCard($event)">
+    <img  :src="m.image" alt="altText" class="slider-capa"/>
+    <div class="card-legends">
+      <div class="header-legends">
+        <div class="icon card-menu-music bmm" @click="showMenu($event)">
+          <i class="fa fa-ellipsis-v bmm"></i><!--btn-menu-music-->
+        </div>
+        <ul class="menu-music">
+          <li>Adicionar na lista</li>
+          <li>Reproduzir</li>
+          <li>Remover da lista</li>
+        </ul>
+      </div>
+      <div class="footer-legends">
+        <div class="legend-desc">
+          <p class="m-title">{{m.title}}</p>
+          <p class="m-author">{{m.author}}</p>
+        </div>
+        <div class="legend-controls">
+          <div class="m-play icon">
+            <i class="fa fa-play icon-color-primary"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>

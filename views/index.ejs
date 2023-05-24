@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/style.css"/>
+	<link rel="stylesheet" href="/css/css/font-awesome.css"/>
+	<title>MUBOX</title>
+
+</head>
+<body>
+	<%- include("components/bar-router")%>
+	<%- include("components/card")%>
+	<%- include("components/slider")%>
+	<%- include("components/menu")%>
+	<%- include("components/content-home")%>
+	<%- include("components/controll-player")%>
+
+	<%- include("components/home")%>
+	<%- include("components/search")%>
+	<%- include("components/single-music")%>
+	<div id="app">
+		<div v-show="isSCroll" class="icon btn-scroll-home" @click="handlerBtnHide($event)">
+			<i class="fa fa-arrow-circle-up icon-color-primary"></i>
+		</div>
+		<menu-bar></menu-bar>
+		<bar-router></bar-router>
+		<controll-player></controll-player>
+		<router-view/>
+	</div>
+	<script src="/main.js"></script>
+</body>
+</html>
